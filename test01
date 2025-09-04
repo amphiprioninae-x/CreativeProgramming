@@ -1,0 +1,6 @@
+print("Hello World")
+
+import random
+a=random.randint(1,100)
+b=random.uniform(1,100)
+print(a,b)

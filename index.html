@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>demo</p>
+    <p>'DAD!' 'MoM'</p>
+    <h3> Guess which food to buy</h3>
+    <h2>The world's best restaurant</h2>
+    <p>
+        Random Integer: <span id="random-int"></span><br>
+        Random Float: <span id="random-float"></span>
+    </p>pi
+    <script>
+        document.getElementById("random-int").innerText = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("random-float").innerText = (Math.random() * 100).toFixed(2);
+    </script>
+</body>
+</html>

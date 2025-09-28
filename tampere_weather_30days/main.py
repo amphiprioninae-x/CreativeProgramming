@@ -76,12 +76,13 @@ class TampereWeatherVisualizer:
 
         ax.set_xlabel('Days (Latest 30 Days)', fontsize=12)
         ax.set_ylabel('Temperature (°C)', fontsize=12)
-        ax.set_title('Tampere Weather Conditions - Latest 30 Days\nDaily Min/Max Temperatures', fontsize=14, fontweight='bold')
+        ax.set_title('Tampere Weather Conditions - Latest 30 Days\nDaily Min/Max Temperatures and Precipitation', fontsize=14, fontweight='bold')
 
-        handles, labels = ax.get_legend_handles_labels()
-        by_label = dict(zip(labels, handles))
+        # Combine legends from both axes so 'Precipitation' appears in the main legend
+        handles1, labels1 = ax.get_legend_handles_labels()
+        handles2, labels2 = ax2.get_legend_handles_labels()
+        by_label = dict(zip(labels1 + labels2, handles1 + handles2))
         ax.legend(by_label.values(), by_label.keys(), loc='upper left', fontsize=11)
-
         ax.grid(True, linestyle='--', alpha=0.3)
         plt.tight_layout()
         plt.show()
